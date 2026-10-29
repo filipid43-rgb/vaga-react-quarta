@@ -1,170 +1,51 @@
-
+import Header from './components/Header'
+import Hero from './components/Hero'
+import Footer from './components/Footer'
+import Depoimentos from './components/Depoimentos'
+import Vagas from './components/Vagas'
+import React from 'react'
 import './App.css'
+import News from './components/News'
 
 function App() {
   
 
   return (
-   <div>
-    <header>
-        <h1>OpenBoard</h1>
-        <div class="header__actions">
-            <a href="">Entrar</a>
-            <button class="btn btn--full">Publicar Vaga - $299</button>
-        </div>
-    </header>
+  <div>
+    <Header />  
 
-    <section class="hero">
-        <h2>As melhores vagas em startups de tecnologia</h2>
-        <p>Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras</p>
-        <button class="btn cta">Publicar Vaga - $299</button>
-    </section>
+    <Hero
+    title="As melhores vagas em startup de tecnologia"
+    subtitle="Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras de recrutadores e candidatos que já fecharam vaga por aqui."
+    >
+    <button className="btn cta">Publicar Vaga - $299</button>
+    </Hero>
+  
 
-    <div class="conteudo">
-        <main>
-            <div class="conteudo__header">
-                <h2>Últimas vagas</h2>
-                <span>7 vagas - atualizado agora</span>
-            </div>
-
-            <div class="card avatar">
-                <div class="card__avatar">
-                    V
-            </div>
-
-            <div class="card__text">
-                <p>Vercel</p>
-                <h3 class="card__title">Full-stack Enginner </h3>
-                <span class="card__badge">R$20k - R$30k</span>
-                <span class="card__badge">Remoto</span>
-            </div>
-            <div class="card__actions">
-                <span>2h</span>
-                <a href="">candidatar-se</a>
-            </div>    
-        </div>
-
-        <div class="card">
-                <div class="card__avatar card__avatar--grey"> 
-                    V
-            </div>
-
-            <div class="card__text">
-                <p>Vercel</p>
-                <h3 class="card__title">Full-stack Enginner </h3>
-                <span class="card__badge">R$20k - R$30k</span>
-                <span class="card__badge">Remoto</span>
-            </div>
-            <div class="card__actions">
-                <span>2h</span>
-                <a href="">candidatar-se</a>
-            </div>    
-        </div>
-
-        </main>
-
-        <aside>
-            <div class="conteudo__header">
-                <h3>Filtros</h3>
-                <a id = "btn-limpar" href="">limpar</a>
-            </div>
-
-            <div class="alert">
-                filtros limpos com sucesso
-            </div>
-
-            <div class="conteudo__filter">
-                <p>Tipo de vaga</p>
-
-                <label for="ck-efetivo">
-                    <input class="filtro"type="checkbox" name="ck-efetivo" id="ck-efetivo"> Efetivo
-                </label>
-                <label for="ck-estagio">
-                    <input class="filtro" type="checkbox" name="ck-estagio" id="ck-estagio"> Estágio
-                </label>
-                <label for="ck-meio">
-                    <input class="filtro" type="checkbox" name="ck-meio" id="ck-meio"> Meio período
-                </label>
-            </div>
-            <div class="conteudo__filter">
-                <p>Área</p>
-
-                <label for="ck-engenharia">
-                    <input class="filtro" type="checkbox" name="ck-engenharia" id="ck-engenharia"> Engenharia
-                </label>
-                <label for="ck-design">
-                    <input class="filtro" type="checkbox" name="ck-design" id="ck-design"> Design
-                </label>
-                <label for="ck-gestao">
-                    <input class="filtro" type="checkbox" name="ck-gestao" id="ck-gestao"> Gestão
-                </label>
-            </div>
-            <div class="conteudo__filter">
-                <p>Localização</p>
-
-                <label for="ck-sp">
-                    <input class="filtro" type="checkbox" name="ck-sp" id="ck-sp"> São Paulo
-                </label>
-                <label for="ck-sc">
-                    <input class="filtro" type="checkbox" name="ck-sc" id="ck-sc"> Santa Catarina
-                </label>
-                <label for="ck-rs">
-                    <input class="filtro" type="checkbox" name="ck-rs" id="ck-rs"> Rio Grande do Sul
-                </label>
-            </div>
-        </aside>
-    </div>
+<div className='conteudo'>
+    <Vagas />
+</div>
 
 
+    <Hero
+       title= "Vagas novas, toda quinta-feira"
+       subtitle= "resumo curto das melhores vagas direto no seu inbox"
+    >
+      <News />
+  </Hero >
 
-    <section class="hero">
-        <h2>Vagas novas, toda quinta-feira</h2>
-        <p>Um resumo curto das melhores vagas direto no seu inbox</p>
-        <form action="">
-            <input class="form__input" type="email" name="email" id="email" placeholder="seu@email.com">
-            <button class="btn" type="submit">Assinar</button>
-        </form>
-    </section>
 
-    <section class="hero">
-        <h2>Quem já usa o OpenBoard</h2>
-        <p>Depoimentos de recrutadores e candidadtos que já fecharam vaga por aqui.</p>
+    <Hero
+    title="Quem já usa o OpenBoard"
+    subtitle="Depoimentos de recrutadores e candidadtos que já fecharam vaga por aqui."
+   >
+    <Depoimentos />
+   </Hero>
 
-        <div class="depoimentos">
-            <div>
-                <p>Encontrei minha vaga atual scrollando num sábado.Aplicação em dois cliques</p>
-                <span>Lucas Vergara</span>
-                <span>Software enginner - SATC</span>
-            </div>
+
+    <Footer />
     
-            <div>
-                <p>Encontrei minha vaga atual scrollando num sábado.Aplicação em dois cliques</p>
-                <span>Lucas Vergara</span>
-                <span>Software enginner - SATC</span>
-            </div>
-    
-            <div>
-                <p>Encontrei minha vaga atual scrollando num sábado.Aplicação em dois cliques</p>
-                <span>Lucas Vergara</span>
-                <span>Software enginner - SATC</span>
-            </div>
-        </div>
-
-    </section>
-
-
-    <footer>
-        <p>OpenBoard 2026 todos os direitos reservados</p>
-
-        <nav>
-            <a href="">Entrar</a>
-            <a href="">Publicar Vaga</a>
-            <a href="">Sobre</a>
-            <a href="">Privacidade</a>
-        </nav>
-
-    </footer>
-   </div>
+  </div>
   )
 }
 
