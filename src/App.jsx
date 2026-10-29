@@ -1,121 +1,170 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+   <div>
+    <header>
+        <h1>OpenBoard</h1>
+        <div class="header__actions">
+            <a href="">Entrar</a>
+            <button class="btn btn--full">Publicar Vaga - $299</button>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    </header>
 
-      <div className="ticks"></div>
+    <section class="hero">
+        <h2>As melhores vagas em startups de tecnologia</h2>
+        <p>Encontre oportunidades reais em empresas curadas. Sem cadastro, sem barreiras</p>
+        <button class="btn cta">Publicar Vaga - $299</button>
+    </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <div class="conteudo">
+        <main>
+            <div class="conteudo__header">
+                <h2>Últimas vagas</h2>
+                <span>7 vagas - atualizado agora</span>
+            </div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+            <div class="card avatar">
+                <div class="card__avatar">
+                    V
+            </div>
+
+            <div class="card__text">
+                <p>Vercel</p>
+                <h3 class="card__title">Full-stack Enginner </h3>
+                <span class="card__badge">R$20k - R$30k</span>
+                <span class="card__badge">Remoto</span>
+            </div>
+            <div class="card__actions">
+                <span>2h</span>
+                <a href="">candidatar-se</a>
+            </div>    
+        </div>
+
+        <div class="card">
+                <div class="card__avatar card__avatar--grey"> 
+                    V
+            </div>
+
+            <div class="card__text">
+                <p>Vercel</p>
+                <h3 class="card__title">Full-stack Enginner </h3>
+                <span class="card__badge">R$20k - R$30k</span>
+                <span class="card__badge">Remoto</span>
+            </div>
+            <div class="card__actions">
+                <span>2h</span>
+                <a href="">candidatar-se</a>
+            </div>    
+        </div>
+
+        </main>
+
+        <aside>
+            <div class="conteudo__header">
+                <h3>Filtros</h3>
+                <a id = "btn-limpar" href="">limpar</a>
+            </div>
+
+            <div class="alert">
+                filtros limpos com sucesso
+            </div>
+
+            <div class="conteudo__filter">
+                <p>Tipo de vaga</p>
+
+                <label for="ck-efetivo">
+                    <input class="filtro"type="checkbox" name="ck-efetivo" id="ck-efetivo"> Efetivo
+                </label>
+                <label for="ck-estagio">
+                    <input class="filtro" type="checkbox" name="ck-estagio" id="ck-estagio"> Estágio
+                </label>
+                <label for="ck-meio">
+                    <input class="filtro" type="checkbox" name="ck-meio" id="ck-meio"> Meio período
+                </label>
+            </div>
+            <div class="conteudo__filter">
+                <p>Área</p>
+
+                <label for="ck-engenharia">
+                    <input class="filtro" type="checkbox" name="ck-engenharia" id="ck-engenharia"> Engenharia
+                </label>
+                <label for="ck-design">
+                    <input class="filtro" type="checkbox" name="ck-design" id="ck-design"> Design
+                </label>
+                <label for="ck-gestao">
+                    <input class="filtro" type="checkbox" name="ck-gestao" id="ck-gestao"> Gestão
+                </label>
+            </div>
+            <div class="conteudo__filter">
+                <p>Localização</p>
+
+                <label for="ck-sp">
+                    <input class="filtro" type="checkbox" name="ck-sp" id="ck-sp"> São Paulo
+                </label>
+                <label for="ck-sc">
+                    <input class="filtro" type="checkbox" name="ck-sc" id="ck-sc"> Santa Catarina
+                </label>
+                <label for="ck-rs">
+                    <input class="filtro" type="checkbox" name="ck-rs" id="ck-rs"> Rio Grande do Sul
+                </label>
+            </div>
+        </aside>
+    </div>
+
+
+
+    <section class="hero">
+        <h2>Vagas novas, toda quinta-feira</h2>
+        <p>Um resumo curto das melhores vagas direto no seu inbox</p>
+        <form action="">
+            <input class="form__input" type="email" name="email" id="email" placeholder="seu@email.com">
+            <button class="btn" type="submit">Assinar</button>
+        </form>
+    </section>
+
+    <section class="hero">
+        <h2>Quem já usa o OpenBoard</h2>
+        <p>Depoimentos de recrutadores e candidadtos que já fecharam vaga por aqui.</p>
+
+        <div class="depoimentos">
+            <div>
+                <p>Encontrei minha vaga atual scrollando num sábado.Aplicação em dois cliques</p>
+                <span>Lucas Vergara</span>
+                <span>Software enginner - SATC</span>
+            </div>
+    
+            <div>
+                <p>Encontrei minha vaga atual scrollando num sábado.Aplicação em dois cliques</p>
+                <span>Lucas Vergara</span>
+                <span>Software enginner - SATC</span>
+            </div>
+    
+            <div>
+                <p>Encontrei minha vaga atual scrollando num sábado.Aplicação em dois cliques</p>
+                <span>Lucas Vergara</span>
+                <span>Software enginner - SATC</span>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>OpenBoard 2026 todos os direitos reservados</p>
+
+        <nav>
+            <a href="">Entrar</a>
+            <a href="">Publicar Vaga</a>
+            <a href="">Sobre</a>
+            <a href="">Privacidade</a>
+        </nav>
+
+    </footer>
+   </div>
   )
 }
 
