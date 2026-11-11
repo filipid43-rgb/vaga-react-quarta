@@ -1,16 +1,44 @@
-# React + Vite
+# OpenBoard — Quadro de Vagas de Tecnologia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 🚧 **Em desenvolvimento.** Projeto da aula de Front-End (2026), ainda sendo finalizado.
 
-Currently, two official plugins are available:
+Aplicação front-end de um quadro de vagas para startups de tecnologia, construída com **React**. Simula um job board com login, listagem de vagas, página de detalhe de cada vaga, newsletter e depoimentos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
 
-## React Compiler
+- Tela de login
+- Home com destaque (hero), listagem de vagas, newsletter e depoimentos
+- Página de detalhe da vaga (`/vaga/:id`)
+- Página 404 personalizada
+- Interface dividida em componentes reutilizáveis
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias
 
-## Expanding the ESLint configuration
+- [React 19](https://react.dev/)
+- [React Router](https://reactrouter.com/)
+- [Vite](https://vitejs.dev/)
+- ESLint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Como rodar localmente
+
+```bash
+git clone https://github.com/filipid43-rgb/vaga-react-quarta.git
+cd vaga-react-quarta
+npm install
+npm run dev
+```
+
+## Estrutura do projeto
+
+```
+src/
+├── components/   # Componentes reutilizáveis
+├── data/         # Dados das vagas
+├── pages/        # Login, Home, VagaDetalhe, Page404
+├── App.jsx       # Rotas da aplicação
+└── main.jsx      # Ponto de entrada
+```
+
+## Autor
+
+**Filipi** — [GitHub](https://github.com/filipid43-rgb)
